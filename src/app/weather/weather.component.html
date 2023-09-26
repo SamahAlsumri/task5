@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="card text-light bg-primary m-5 Stylethis">
+    <div class="row">
+      
+        <div class="card-header text-center">
+         
+          <br>
+          <br>  
+          <h1 style="font: size 55px; color:rgb(240, 129, 31);">Today Weather</h1>
+            <div class="card-body">
+            <div *ngIf="weatherData">
+              <h3>{{ weatherData.name }}</h3>
+              <p>Temperature: {{ weatherData.main.temp }}°C</p>
+              <p>Description: {{ weatherData.weather[0].description }}</p>
+              <p>Humidity: {{ weatherData.main.humidity }}%</p>
+              <img [src]="'https://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'" alt="Weather Icon">
+            </div>
+            <div *ngIf="error">
+              <p>{{ error }}</p>
+            </div>
+        
+            
+               <br>
+            
+       
+        
+            <form  (ngSubmit)="searchWeather()">
+              <input type="text" class="input" placeholder="Enter a Country Name" [(ngModel)]="city" name="city">
+              <br><br>
+              <button class="btn" type="submit" class="btn btn-light">Search</button>
+            </form>
+              
+          </div>
+         </div>
+         </div>
+         </div>
+      </div>
+  
+  

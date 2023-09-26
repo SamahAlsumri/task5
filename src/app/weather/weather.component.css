@@ -1,0 +1,32 @@
+.Stylethis
+{
+    max-width: 30rem
+}
+
+
+.container
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: aliceblue;
+height: 800px;
+}
+.btn{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.input{
+    width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+transition: width 0.4s ease-in-out;
+}
